@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+<body>
+    <main class="p-5">
+        <h1 class="text-center text-lg text-blue-500">Hello World</h1>
+        <div class="my-5 rounded-md border-violet-200 bg-violet-300">
+            <p class="text-center font-mono text-[50px] font-extrabold">A div</p>
+        </div>
+
+        <div class="fixed top-0 h-10 w-10 bg-red-400"></div>
+        <div class="flex justify-center space-x-4">
+            <div class="h-16 w-16 rounded-full bg-blue-500"></div>
+            <div class="h-16 w-16 rounded-full bg-blue-500"></div>
+            <div class="h-16 w-16 rounded-full bg-blue-500"></div>
+            <div class="h-16 w-16 rounded-full bg-blue-500"></div>
+        </div>
+
+        <div class="mx-5 my-5 grid grid-cols-6 gap-2">
+            <div class="h-10 w-20 bg-violet-700"></div>
+            <div class="h-10 w-20 bg-violet-700"></div>
+            <div class="h-10 w-20 bg-violet-700"></div>
+            <div class="h-10 w-20 bg-violet-700"></div>
+            <div class="h-10 w-20 bg-violet-700"></div>
+            <div class="h-10 w-20 bg-violet-700"></div>
+        </div>
+
+        <div class="hidden md:block">
+            <p>I will appear for device resultion > 768 px !</p>
+        </div>
+
+        <div class="hidden max-md:block">
+            <p>I will appear for device resultion < 768 px !!</p>
+        </div>
+
+        <button
+            class="my-5 rounded-lg bg-blue-500 px-3 py-2 text-white hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 active:bg-blue-900">click
+            me</button>
+
+        <ul>
+            <li class="bg-white p-2 first:bg-yellow-200">Item1</li>
+            <li class="bg-white p-2 first:bg-yellow-200 odd:bg-blue-300 even:bg-green-300">Item2</li>
+            <li class="bg-white p-2 first:bg-yellow-200 odd:bg-blue-300 even:bg-green-300">Item3</li>
+            <li class="bg-white p-2 first:bg-yellow-200 odd:bg-blue-300 even:bg-green-300">Item4</li>
+            <li class="bg-white p-2 first:bg-yellow-200 odd:bg-blue-300 even:bg-green-300">Item5</li>
+        </ul>
+
+        <!-- Theme :dark-->
+        <div class="ann">
+            <h3 class="text-base font-medium tracking-tight text-slate-900 dark:text-white">This is test el</h3>
+            <p class="text-sm text-slate-500 dark:to-blue-200">This is an even longer p tag el</p>
+
+            <button id="toggleDark" class="mt-8 rounded-md bg-blue-200 px-4 py-2 text-sm font-medium text-blue-800"
+                onclick="document.body.classList.toggle('dark')">Toggle Dark Mode</button>
+        </div>
+
+        <button
+            class="transform rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 px-6 py-3 font-semibold text-white shadow-md transition duration-300 ease-in-out hover:scale-105 hover:from-purple-600 hover:to-blue-600 focus:outline-none focus:ring focus:ring-purple-300 active:bg-blue-700">Click</button>
+        <p class="text-ileven bg-[#FAF2D3] p-2 text-2xl">Custom color</p>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const toggleDark = document.getElementById('toggleDark')
+                toggleDark.addEventListener('click', function () {
+                    if (document.documentElement.classList.contains('dark')) {
+                        document.documentElement.classList.remove('dark')
+                    }
+                    else {
+                        document.documentElement.classList.add('dark')
+                    }
+                    // alert("click!")
+                });
+            });
+        </script>
+
+    </main>
+
+</body>
+
+</html>
